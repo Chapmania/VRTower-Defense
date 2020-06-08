@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 4086743000292619854}
   - component: {fileID: 5509991328502552229}
   - component: {fileID: 6223868130374480976}
+  - component: {fileID: 3029566982149282221}
   m_Layer: 0
   m_Name: Tip
   m_TagString: Untagged
@@ -205,6 +206,22 @@ CapsuleCollider:
   m_Height: 0.094175205
   m_Direction: 1
   m_Center: {x: 0, y: -0.00000011920929, z: 0}
+--- !u!54 &3029566982149282221
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6223868130374480975}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &8542102953145869890
 GameObject:
   m_ObjectHideFlags: 0

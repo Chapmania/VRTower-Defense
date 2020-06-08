@@ -9,10 +9,12 @@ public class Arrow : MonoBehaviour
     private Rigidbody m_Rigidbody = null;
     private bool m_IsStopped = true;
     private Vector3 m_LastPosition = Vector3.zero;
+    private LayerMask layer;
 
     private void Awake()
     {
         m_Rigidbody = GetComponent<Rigidbody>();
+        layer = LayerMask.GetMask("menu");
     }
     private void Start()
     {
@@ -29,9 +31,16 @@ public class Arrow : MonoBehaviour
 
         //collision
         RaycastHit hit;
-        if(Physics.Linecast(m_LastPosition,m_Tip.position, out hit))
+        if(Physics.Linecast(m_LastPosition,m_Tip.position, out hit,~layer))
         {
             Stop(hit.collider.gameObject);
+
+        }
+
+        if (Physics.Linecast(m_LastPosition, m_Tip.position, out hit, layer))
+        {
+            Stop(hit.collider.gameObject);
+            hit.collider.gameObject.GetComponent<Menu>().Press();
 
         }
 

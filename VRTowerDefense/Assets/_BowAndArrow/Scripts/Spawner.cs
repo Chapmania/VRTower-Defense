@@ -15,12 +15,15 @@ public class Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer -= Time.deltaTime;
-        if (timer <= 0) 
+        if (GameManager.play)
         {
-            timer = Random.Range(5, 20);
-            Instantiate(enemy, transform.position, transform.rotation);
+            timer -= Time.deltaTime;
+            if (timer <= 0)
+            {
+                timer = Random.Range(5, 20);
+                Instantiate(enemy, transform.position, transform.rotation);
 
+            }
         }
 
     }
