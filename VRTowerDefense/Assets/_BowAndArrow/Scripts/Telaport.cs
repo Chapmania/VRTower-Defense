@@ -14,13 +14,13 @@ public class Telaport : MonoBehaviour
         if (OVRInput.GetDown(OVRInput.RawButton.A))
             transform.position = position1.transform.position;
 
-        if (OVRInput.GetDown(OVRInput.RawButton.B))
+        if (OVRInput.GetDown(OVRInput.RawButton.X))
             transform.position = position2.transform.position;
 
-        if (OVRInput.GetDown(OVRInput.RawButton.X))
+        if (OVRInput.GetDown(OVRInput.RawButton.Y))
             transform.position = position3.transform.position;
 
-        if (OVRInput.GetDown(OVRInput.RawButton.Y))
+        if (OVRInput.GetDown(OVRInput.RawButton.B))
             transform.position = position4.transform.position;
     }
 }

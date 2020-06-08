@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour, IDamageable 
-{ 
-
+{
+    public int turns = 0;
     public int health;
     // Start is called before the first frame update
     void Start()
@@ -29,5 +29,11 @@ public class Enemy : MonoBehaviour, IDamageable
     private void Die()
     {
         Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        other.gameObject.GetComponent<Goal>().Attack();
+        Die();
     }
 }

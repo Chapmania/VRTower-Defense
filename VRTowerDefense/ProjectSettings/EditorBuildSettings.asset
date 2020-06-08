@@ -4,7 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_BowAndArrow/Main.unity
+    guid: 0bdc2251efd355d45add28195d99d336
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: ee08a02b37619d2478e5f80975d2b387,
       type: 2}
